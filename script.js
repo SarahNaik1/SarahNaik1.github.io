@@ -144,7 +144,7 @@ window.addEventListener('scroll', revealStepperItems);
 // Trigger the function on page load to check for items already in view
 revealStepperItems();
 
-const projectIttems = document.querySelectorAll('.project-item');
+const projectItems = document.querySelectorAll('.project-item');
 const techItems = document.querySelectorAll('.tech-item');
 
 function handleScroll() {
