@@ -229,25 +229,63 @@ body {
         padding: 30px 15px;
     }
 
+    .timeline {
+        position: relative;
+        margin: 20px 0;
+        padding: 0;
+    }
+
     .timeline::before {
-        left: 20px;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20px; /* Align the timeline line to the left */
+        width: 2px;
+        height: 100%;
+        background-color: #B19CD7; /* Timeline line color */
+        z-index: -1; /* Ensure the line is behind the content */
     }
 
     .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-        text-align: left !important;
+        width: 100%; /* Make all items take full width */
+        text-align: left; /* Align text to the left */
+        position: relative;
     }
 
-    .timeline-item:nth-child(even) {
+    .timeline-item:nth-child(odd) {
         left: 0;
+        text-align: left;
+        padding-right: 0px; /* Increase padding to avoid overlap */
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 10px; /* Align the marker to the left */
+        width: 10px;
+        height: 10px;
+        background-color: #B19CD7; /* Marker color */
+        border-radius: 50%;
+    }
+
+    .timeline-item::after {
+        display: none; /* Remove the additional line */
+    }
+
+    .timeline-content {
+        margin-left: 40px; /* Add margin to separate content from the marker */
+        background-color: rgba(255, 255, 255, 0.1); /* Content background */
+        padding: 20px;
+        border-radius: 10px;
     }
 
     .timeline-content::before {
-        left: 60px;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+        display: none; /* Remove the arrow for all items */
+    }
+
+    .timeline-date {
+        margin-left: 50px;
     }
 }
 
@@ -722,13 +760,21 @@ html {
         transform: translateY(0%);
     }
 
-    .image-card.hidden {
-        transform: translateY(-100%);
-        opacity: 0;
+    .container {
+        position: relative;
+        z-index: 1; /* Ensure it appears below the imageCard */
     }
 
-    .container {
-        margin-top: 100vh; /* Push content below the imageCard */
+    .section {
+        margin: 20px; /* Add spacing for sections */
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1); /* Optional: Add a background for better visibility */
+        border-radius: 10px;
+    }
+
+    .content {
+        margin-left: 0; /* Reset margin for smaller screens */
+        padding: 10px; /* Adjust padding */
     }
 }
 

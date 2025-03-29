@@ -172,20 +172,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const imageCard = document.getElementById("imageCard");
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener("scroll", () => {
-        if (window.innerWidth <= 768) {
-            if (window.scrollY > lastScrollY) {
-                // Scrolling down
-                imageCard.classList.add("hidden");
-            } else {
-                // Scrolling up
-                imageCard.classList.remove("hidden");
-            }
-            lastScrollY = window.scrollY;
-        }
-    });
-});
