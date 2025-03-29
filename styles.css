@@ -239,7 +239,7 @@ body {
         content: '';
         position: absolute;
         top: 0;
-        left: 20px; /* Align the timeline line to the left */
+        left: -50px; /* Adjust the line to be closer to the left */
         width: 2px;
         height: 100%;
         background-color: #B19CD7; /* Timeline line color */
@@ -259,14 +259,13 @@ body {
     }
 
     .timeline-item::before {
-        content: '';
         position: absolute;
         top: 20px;
         left: 10px; /* Align the marker to the left */
         width: 10px;
         height: 10px;
         background-color: #B19CD7; /* Marker color */
-        border-radius: 50%;
+        border-width: 10px 10px 10px 0;
     }
 
     .timeline-item::after {
@@ -281,11 +280,26 @@ body {
     }
 
     .timeline-content::before {
-        display: none; /* Remove the arrow for all items */
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: -10px; /* Position the arrow on the left side */
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 10px 0; /* Create a triangle shape */
+        border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent; /* Arrow color */
     }
 
     .timeline-date {
         margin-left: 50px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content::before {
+        left: -10px;
+        right: auto;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
     }
 }
 
