@@ -238,8 +238,8 @@ body {
     .timeline::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: -50px; /* Adjust the line to be closer to the left */
+        top: -30px;
+        left: -40px; /* Adjust the line to be closer to the left */
         width: 2px;
         height: 100%;
         background-color: #B19CD7; /* Timeline line color */
@@ -318,7 +318,7 @@ body {
         border-width: 10px 10px 10px 0; /* Create a triangle pointing to the left */
         border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent; /* Arrow color */
     }
-    
+
 }
 
 .container svg {
