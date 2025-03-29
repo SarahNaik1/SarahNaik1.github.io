@@ -183,17 +183,3 @@ function debounce(func, wait) {
 window.addEventListener('scroll', debounce(handleScroll, 50));
 window.addEventListener('scroll', debounce(revealTimelineItems, 50));
 window.addEventListener('scroll', debounce(revealStepperItems, 50));
-
-document.addEventListener("DOMContentLoaded", function () {
-    const imageCard = document.querySelector(".image-card");
-
-    window.addEventListener("scroll", () => {
-        const rect = imageCard.getBoundingClientRect();
-        if (rect.top < 0) {
-            imageCard.style.position = "absolute";
-            imageCard.style.top = `${window.scrollY}px`;
-        } else {
-            imageCard.style.position = "sticky";
-        }
-    });
-});
