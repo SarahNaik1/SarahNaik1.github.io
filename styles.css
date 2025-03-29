@@ -781,7 +781,6 @@ html {
 @media (max-width: 768px) {
     body {
         margin: 0;
-        overflow-x: hidden;
     }
 
     .image-card {
@@ -821,7 +820,6 @@ html {
 @media (max-width: 768px) {
     body {
         margin: 0;
-        overflow-x: hidden;
     }
 
     .navbar {
@@ -856,7 +854,6 @@ html {
 
 @media (max-width: 768px) {
     html, body {
-        overflow-x: hidden; /* Disable horizontal scrolling */
         width: 100%; /* Ensure the width is constrained to the viewport */
     }
 
