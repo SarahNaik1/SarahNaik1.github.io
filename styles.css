@@ -301,6 +301,24 @@ body {
         border-width: 10px 10px 10px 0;
         border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
     }
+
+    .timeline-item:nth-child(even) {
+        left: 0; /* Align even items with odd items */
+        text-align: left; /* Align text to the left */
+        padding-left: 0; /* Remove extra padding */
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 40px; /* Match the margin of odd items */
+    }
+
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -10px; /* Position the arrow on the left */
+        right: auto; /* Reset the right property */
+        border-width: 10px 10px 10px 0; /* Create a triangle pointing to the left */
+        border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent; /* Arrow color */
+    }
+    
 }
 
 .container svg {
