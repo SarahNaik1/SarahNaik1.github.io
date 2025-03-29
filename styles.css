@@ -96,28 +96,6 @@ body {
     padding: 20px;
 }
 
-/* @media (max-width: 768px) {
-    .image-card {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        padding: 40px 20px;
-    }
-    
-    .card-image {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .main-content {
-        margin-left: 0;
-    }
-    
-    body.scrolled-past-hero .image-card {
-        display: none;
-    }
-} */
-
 .section {
     margin-left: 50px;
     margin-bottom: 50px;
@@ -751,5 +729,41 @@ html {
 
     .container {
         margin-top: 100vh; /* Push content below the imageCard */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 10px; /* Adjust position for smaller screens */
+        left: 50%;
+        transform: translateX(-123%);
+        z-index: 1000;
+        background-color: rgba(18, 18, 18, 0.8);
+        padding: 5px; /* Reduce padding */
+        border-radius: 15px; /* Smaller border radius */
+    }
+
+    .nav-links {
+        gap: 10px; /* Reduce spacing between links */
+    }
+
+    .navbar svg {
+        width: 20px; /* Smaller icons */
+        height: 20px;
+    }
+
+    .navbar a {
+        width: 40px; /* Smaller clickable area */
+        height: 40px;
+    }
+
+    .navbar a:hover {
+        background-color: #050505;
     }
 }
