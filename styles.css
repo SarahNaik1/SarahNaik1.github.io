@@ -60,23 +60,6 @@ body {
     fill: #ff4081; /* Change to your preferred hover color */
 }
 
-/* .full-page-image {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    transition: height 0.5s ease;
-} */
-
-/* .main-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
-
 .container {
     display: flex;
     margin-top: 0; /* Remove the 100vh margin */
@@ -113,7 +96,7 @@ body {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .image-card {
         position: relative;
         width: 100vw;
@@ -130,11 +113,10 @@ body {
         margin-left: 0;
     }
     
-    /* Hide after scrolling */
     body.scrolled-past-hero .image-card {
         display: none;
     }
-}
+} */
 
 .section {
     margin-left: 50px;
@@ -737,5 +719,37 @@ html {
 
     .certification-container {
         margin: 10px 0; /* Add spacing between stacked certifications */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .image-card {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 90%;
+        margin: 5%;
+        background: #B19CD7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(0%);
+    }
+
+    .image-card.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .container {
+        margin-top: 100vh; /* Push content below the imageCard */
     }
 }
