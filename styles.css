@@ -514,6 +514,14 @@ body {
     font-size: 1rem; /* Adjust icon size */
 }
 
+/* Highlight all tech stack items in mobile mode */
+@media (max-width: 768px) {
+    .tech-item {
+        background-color: #B19CD7; /* Highlight color */
+        color: #121212; /* Text color for highlighted items */
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
