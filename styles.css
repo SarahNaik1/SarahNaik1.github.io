@@ -713,7 +713,7 @@ html {
 
     .award-left::after,
     .award-right::after {
-        left: 15px;
+        left: -5px;
     }
 
     .award-right {
