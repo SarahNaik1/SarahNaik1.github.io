@@ -60,14 +60,14 @@ body {
     fill: #ff4081; /* Change to your preferred hover color */
 }
 
-.full-page-image {
+/* .full-page-image {
     height: 100vh;
     overflow: hidden;
     position: relative;
     transition: height 0.5s ease;
-}
+} */
 
-.main-image {
+/* .main-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -75,11 +75,11 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-}
+} */
 
 .container {
     display: flex;
-    margin-top: 100vh; /* Push content below the full-page image */
+    margin-top: 0; /* Remove the 100vh margin */
 }
 
 .image-card {
@@ -88,16 +88,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
     width: 300px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    background-color: #B19CD7;
+    background: #B19CD7;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     z-index: 100;
-    display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    gap: 10px; /* Space between image and text */
 }
 
 .image-card.visible {
@@ -115,9 +109,31 @@ body {
 }
 
 .content {
-    flex: 1;
-    margin-left: 340px; /* Space for the fixed card */
+    margin-left: 340px;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .image-card {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 40px 20px;
+    }
+    
+    .card-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    /* Hide after scrolling */
+    body.scrolled-past-hero .image-card {
+        display: none;
+    }
 }
 
 .section {
@@ -248,6 +264,11 @@ body {
 
 /* Responsive Timeline */
 @media (max-width: 768px) {
+
+    section {
+        padding: 30px 15px;
+    }
+
     .timeline::before {
         left: 20px;
     }
@@ -425,6 +446,18 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     gap: 10px; /* Space between items */
+}
+
+@media (max-width: 768px) {
+    
+    .projects-container {
+        flex-direction: column;
+    }
+    
+    .tech-stack-container {
+        width: 100%;
+        position: static;
+    }
 }
 
 .tech-item {
