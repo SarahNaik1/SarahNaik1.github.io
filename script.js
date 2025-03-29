@@ -172,3 +172,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+window.addEventListener('scroll', debounce(handleScroll, 50));
+window.addEventListener('scroll', debounce(revealTimelineItems, 50));
+window.addEventListener('scroll', debounce(revealStepperItems, 50));
